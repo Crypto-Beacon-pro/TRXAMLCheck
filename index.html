@@ -1541,17 +1541,17 @@
       var label = btn.textContent.trim().toLowerCase();
 
       if (label.includes('sign in')) {
-        window.location.href = 'https://trx-aml-check.vercel.app/signin';
+        alert('Демо: сканирование адреса ' + addr);
       } else if (label.includes('api') || label.includes('get api') || label.includes('get tron api')) {
-        window.location.href = 'https://trx-aml-check.vercel.app/api';
+        alert('Демо: сканирование адреса ' + addr);
       } else if (label.includes('pdf') || label.includes('view aml report') || label.includes('view sample')) {
-        window.location.href = 'https://trx-aml-check.vercel.app/sample-report';
+        alert('Демо: сканирование адреса ' + addr);
       } else if (label.includes('bulk') || label.includes('buy bulk')) {
-        window.location.href = 'https://trx-aml-check.vercel.app/bulk';
+        alert('Демо: сканирование адреса ' + addr);
       } else if (label.includes('monitor')) {
-        window.location.href = 'https://trx-aml-check.vercel.app/monitor';
+        alert('Демо: сканирование адреса ' + addr);
       } else if (label.includes('enterprise')) {
-        window.location.href = 'https://trx-aml-check.vercel.app/enterprise';
+        alert('Демо: сканирование адреса ' + addr);
       } else {
         // Default: AML scan
         var addr = document.querySelector('.af-input') ? document.querySelector('.af-input').value.trim() : '';
