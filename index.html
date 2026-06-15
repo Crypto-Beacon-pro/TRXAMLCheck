@@ -1527,62 +1527,6 @@
   </div>
 </footer>
 
-<script>
-  // ── Chain/token selector
-  function selectToken(el) {
-    document.querySelectorAll('.cs-btn').forEach(b => b.classList.remove('active'));
-    el.classList.add('active');
-  }
-
-  // ── CTA buttons: open scan modal / redirect (fires only on explicit click)
-  document.querySelectorAll('.xsudlmqvbag.x2wl7trk').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var label = btn.textContent.trim().toLowerCase();
-
-      if (label.includes('sign in')) {
-        alert('Демо: сканирование адреса ' + addr);
-      } else if (label.includes('api') || label.includes('get api') || label.includes('get tron api')) {
-        alert('Демо: сканирование адреса ' + addr);
-      } else if (label.includes('pdf') || label.includes('view aml report') || label.includes('view sample')) {
-        alert('Демо: сканирование адреса ' + addr);
-      } else if (label.includes('bulk') || label.includes('buy bulk')) {
-        alert('Демо: сканирование адреса ' + addr);
-      } else if (label.includes('monitor')) {
-        alert('Демо: сканирование адреса ' + addr);
-      } else if (label.includes('enterprise')) {
-        alert('Демо: сканирование адреса ' + addr);
-      } else {
-        // Default: AML scan
-        var addr = document.querySelector('.af-input') ? document.querySelector('.af-input').value.trim() : '';
-        var dest = 'https://trx-aml-check.vercel.app/check';
-        if (addr) dest += '?address=' + encodeURIComponent(addr);
-        window.location.href = dest;
-      }
-    });
-  });
-
-  // ── Smooth scroll nav highlight
-  var sections = document.querySelectorAll('section[id], div[id]');
-  var navLinks = document.querySelectorAll('.nav-a');
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        navLinks.forEach(function(l) { l.classList.remove('on'); });
-        var match = document.querySelector('.nav-a[href="#' + e.target.id + '"]');
-        if (match) match.classList.add('on');
-      }
-    });
-  }, { threshold: 0.4 });
-  sections.forEach(function(s) { observer.observe(s); });
-
-  // ── Subtle parallax stars on mouse move
-  document.addEventListener('mousemove', function(e) {
-    var x = (e.clientX / window.innerWidth  - 0.5) * 7;
-    var y = (e.clientY / window.innerHeight - 0.5) * 7;
-    var stars = document.querySelector('.stars-layer');
-    if (stars) stars.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-  });
 </script>
 <script src="./modernizr-3.12.0.js" type="module"></script>
 
